@@ -1,0 +1,311 @@
+/* ===== RESET & FONT ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Rajdhani', sans-serif;
+}
+
+body {
+  background: #071A3D;
+  color: #fff;
+}
+
+/* ===== STAT KECIL ===== */
+.stat {
+  font-size: 13px;
+  opacity: 0.85;
+}
+
+/* ===== NAVBAR ===== */
+nav {
+  background: linear-gradient(90deg, #071A3D, #0A2A66);
+  padding: 15px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav h1 {
+  font-weight: 700;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+nav ul li a:hover {
+  color: #1E90FF;
+}
+
+/* ===== SECTION ===== */
+.section {
+  padding: 50px;
+  max-width: 1100px;
+  margin: auto;
+  text-align: center;
+}
+
+.section h2 {
+  margin-bottom: 30px;
+  border-bottom: 3px solid #1E90FF;
+  display: inline-block;
+  padding-bottom: 10px;
+}
+
+/* ===== TABLE ===== */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 30px;
+  background: #071A3D;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.5);
+}
+
+thead {
+  background: linear-gradient(90deg, #0A2A66, #102B5C);
+}
+
+thead th {
+  padding: 15px;
+  font-weight: 700;
+}
+
+tbody td {
+  padding: 14px;
+  border-bottom: 1px solid #1c3c75;
+  text-align: center;
+}
+
+/* ===== HOVER ===== */
+tbody tr {
+  transition: all 0.25s ease;
+}
+
+tbody tr:hover {
+  background: #102B5C;
+  transform: scale(1.01);
+}
+
+/* ===== BADGE ===== */
+.badge {
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 11px;
+  font-weight: 700;
+  margin-left: 6px;
+  display: inline-block;
+}
+
+.qualified {
+  background: #1E90FF;
+}
+
+.eliminated {
+  background: #000;
+}
+
+/* ===== TOP 3 LOCKED ===== */
+.top1 {
+  background: linear-gradient(90deg, #FFD700, #0A2A66);
+}
+
+.top2 {
+  background: linear-gradient(90deg, #C0C0C0, #0A2A66);
+}
+
+.top3 {
+  background: linear-gradient(90deg, #CD7F32, #0A2A66);
+}
+
+.top1 td,
+.top2 td,
+.top3 td {
+  font-weight: 700;
+}
+
+/* ===== ELIMINATED ===== */
+.danger {
+  background: #0A1F3F !important;
+  opacity: 0.65;
+}
+
+/* ===== FORM ICON ===== */
+.form {
+  display: flex;
+  justify-content: center;
+  gap: 3px;
+}
+
+.form span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.win {
+  background: #1aff6a;
+  color: #000;
+}
+
+.lose {
+  background: #ff3b3b;
+  color: #fff;
+}
+
+.draw {
+  background: #9e9e9e;
+  color: #000;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  background: #000;
+  padding: 15px;
+  text-align: center;
+  margin-top: 50px;
+}
+
+/* ======================= */
+/* ===== RESPONSIVE ===== */
+/* ======================= */
+
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .section {
+    padding: 25px;
+  }
+
+  table {
+    font-size: 12px;
+  }
+}
+
+/* ===== MOBILE EXTREME MODE ===== */
+@media (max-width: 600px) {
+
+  nav h1 {
+    font-size: 16px;
+  }
+
+  nav ul {
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+  }
+
+  .section {
+    padding: 15px;
+  }
+
+  table {
+    font-size: 10px;
+  }
+
+  /* Sembunyikan kolom berat */
+  #standings th:nth-child(7),
+  #standings th:nth-child(8),
+  #standings td:nth-child(7),
+  #standings td:nth-child(8) {
+    display: none;
+  }
+
+  /* Form lebih kecil */
+  .form span {
+    width: 16px;
+    height: 16px;
+    font-size: 9px;
+  }
+
+  /* Match Result Card Mode */
+  #matches thead {
+    display: none;
+  }
+
+  #matches tr {
+    display: block;
+    background: #0A2A66;
+    margin-bottom: 12px;
+    border-radius: 10px;
+    padding: 10px;
+  }
+
+  #matches td {
+    display: block;
+    border: none;
+    padding: 4px;
+    text-align: center;
+  }
+
+  .score {
+    font-size: 18px;
+    font-weight: 700;
+    color: #1E90FF;
+  }
+}
+
+/* ===== KLASEMEN ANIMASI ===== */
+@keyframes moveUp {
+  from { background-color: #1E3A8A; transform: translateY(15px); opacity: 0.5; }
+  to { background-color: transparent; transform: translateY(0px); opacity: 1; }
+}
+
+@keyframes moveDown {
+  from { background-color: #8A1E3A; transform: translateY(-15px); opacity: 0.5; }
+  to { background-color: transparent; transform: translateY(0px); opacity: 1; }
+}
+
+tbody tr.animate-up {
+  animation: moveUp 0.5s ease-out;
+}
+
+tbody tr.animate-down {
+  animation: moveDown 0.5s ease-out;
+}
+
+/* ===== MODE LANDSCAPE HP ===== */
+@media screen and (max-width: 900px) and (orientation: landscape) {
+  body {
+    font-size: 14px;
+  }
+
+  table {
+    font-size: 9px;
+  }
+
+  nav h1 {
+    font-size: 18px;
+  }
+
+  .form span {
+    width: 14px;
+    height: 14px;
+    font-size: 9px;
+  }
+
+  nav ul {
+    gap: 8px;
+  }
+
+  .badge {
+    font-size: 9px;
+    padding: 3px 8px;
+  }
+}

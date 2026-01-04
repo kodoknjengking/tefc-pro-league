@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Klasemen</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<nav>
+  <h1>TEFC Pro League</h1>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="klasemen.html">Klasemen</a></li>
+    <li><a href="match.html">Match</a></li>
+    <li><a href="about-us.html">About Us</a></li>
+  </ul>
+</nav>
+
+<section class="section">
+  <h2>KLASEMEN</h2>
+
+  <table id="standings">
+    <thead>
+      <tr>
+        <th>No</th>
+        <th>Klub</th>
+        <th>T</th>
+        <th>M</th>
+        <th>S</th>
+        <th>K</th>
+        <th>GM</th>
+        <th>GK</th>
+        <th>SG</th>
+        <th>Poin</th>
+        <th>5 Terakhir</th>
+      </tr>
+    </thead>
+
+    <tbody id="klasemen-body">
+      <!-- PLACEHOLDER AGAR TABEL LANGSUNG MUNCUL -->
+      <tr>
+        <td colspan="11" style="text-align:center; opacity:.6;">
+          Memuat klasemen...
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p style="margin-top:15px;">
+    *3 posisi terbawah otomatis <b>ELIMINATED</b>
+  </p>
+</section>
+
+<footer>
+  FC Mobile Tournament © 2025
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+<script src="assets/js/klasemen.js"></script>
+</body>
+</html>
